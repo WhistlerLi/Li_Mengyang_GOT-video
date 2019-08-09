@@ -86,8 +86,18 @@ main {
 .greyjoy { background-position:-202px -54px; }
 .greyjoy:hover { background-position:-202px 0px; }
 
-.arryn { background-position:-253px -54px; }
-.arryn:hover { background-position:-253px 0px; }
+.arryn { background-position:-252.5px -54px; }
+.arryn:hover { background-position:-252.5px 0px; }
+
+.frey { background-position:-303.5px -54px; }
+.frey:hover { background-position:-303.5px 0px; }
+
+.tyrell { background-position:-354px -54px; }
+.tyrell:hover { background-position:-354px 0px; }
+
+.targaryen { background-position:-405px -54px; }
+.targaryen:hover { background-position:-405px 0px; }
+
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
@@ -118,12 +128,14 @@ main {
 
 .close-lightbox {
   float: right;
-  margin-right: 20px;
-  margin-top: 10px;
+  margin-right: 40px;
+  margin-top: 40px;
   color: white;
+  font-family:arial, sans-serif;
+  text-decoration:none;
 }
 
-
+.close-lightbox:hover{ opacity:0.6; }
 
 video {
 	width: 85%;
