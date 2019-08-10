@@ -36,16 +36,8 @@ main {
 	overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px; transition: all .5s; }
+#houseImages { position:relative; width:4000px; /*transition: all .5s;*/ }
 #houseImages img { float:left; }
-
-.house-info {
-  color: white;
-  width: 75%;
-  font-size: 1.5em;
-  line-height: 1.5;
-  margin: 10px auto 0 auto;
-}
 
 #bottomNav { margin-top:30px; }
 
@@ -56,10 +48,15 @@ main {
 	cursor:pointer;
 }
 
+.hidden
+{
+	display:none;
+}
+
 /* ----- end default styles ----- */
 
 /* ----- image sprite ----- */
-.sigilContainer {
+.sigil-container {
 	width:51px;
 	height:54px;
 	display:inline-block;
@@ -71,33 +68,52 @@ main {
 	-moz-transition:-moz-transform .3s;
 }
 
-.stark { background-position:0px -54px; }
-.stark:hover { background-position:0px 0px; }
+.stark { 
+	background-position:0px -54px; 
+}
 
-.baratheon { background-position:-50.5px -54px; }
-.baratheon:hover { background-position:-51px 0px; }
+.stark:hover { 
+	background-position:0px 0px; 
+}
 
-.lannister { background-position:-101px -54px; }
-.lannister:hover { background-position:-101px 0px; }
+.baratheon { 
+	background-position:-50.5px -54px;
+}
+.baratheon:hover { 
+	background-position:-51px 0px; 
+}
 
-.tully { background-position:-152px -54px; }
-.tully:hover { background-position:-152px 0px; }
+.lannister { 
+	background-position:-101px -54px; 
+}
 
-.greyjoy { background-position:-202px -54px; }
-.greyjoy:hover { background-position:-202px 0px; }
+.lannister:hover { 
+	background-position:-101px 0px; 
+}
 
-.arryn { background-position:-252.5px -54px; }
-.arryn:hover { background-position:-252.5px 0px; }
+.tully { 
+	background-position:-152px -54px; 
+}
 
-.frey { background-position:-303.5px -54px; }
-.frey:hover { background-position:-303.5px 0px; }
+.tully:hover { 
+	background-position:-152px 0px; 
+}
 
-.tyrell { background-position:-354px -54px; }
-.tyrell:hover { background-position:-354px 0px; }
+.greyjoy { 
+	background-position:-202px -54px; 
+}
 
-.targaryen { background-position:-405px -54px; }
-.targaryen:hover { background-position:-405px 0px; }
+.greyjoy:hover { 
+	background-position:-202px 0px; 
+}
 
+.arryn { 
+	background-position:-253px -54px; 
+}
+
+.arryn:hover { 
+	background-position:-253px 0px;
+}
 /* ----- end image sprite ----- */
 
 /* ----- classes for transitions ----- */
@@ -115,31 +131,51 @@ main {
 }
 
 /* add styles here for lightbox and video */
-.lightbox {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  background-color: rgba(0,0,0,0.9);
-  display: none;
+
+.lightbox
+{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	background-color: rgb(0, 0, 0, 0.5);
+	height: 100%;
+	text-align: center;
+	display: none;
 }
 
-.show-lightbox { display: block; }
-
-.close-lightbox {
-  float: right;
-  margin-right: 40px;
-  margin-top: 40px;
-  color: white;
-  font-family:arial, sans-serif;
-  text-decoration:none;
+.lightbox-on{
+	display: block;
 }
 
-.close-lightbox:hover{ opacity:0.6; }
+.lightbox-close
+{
+	position: absolute;
+	color: white;
+	font-size: 2rem;
+	right: 12px;
+	top: 12px;
+	cursor: pointer;
+}
 
 video {
-	width: 85%;
-	margin: 10% auto 10% auto;
+	width: 80%;
+	margin-top: 10%;
 	border: thin solid #949393;
-  display: block;
 }
+
+
+
+.house-info{
+	color: #fff;
+	font-size: 18px;
+	margin: 0 auto;
+	width: 65%;
+	text-align: center;
+	line-height: 1.5;
+	margin-top: 10px;
+}
+
+.house-name{
+	letter-spacing: 3px;
+}
+
