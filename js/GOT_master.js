@@ -35,20 +35,10 @@ House Greyjoy's sigil is traditionally a golden kraken on a black field. Their h
         ];
         
         function openLightbox(){
-          //debugger;
-          // split helps to get to the right class
-          
-          // FOR FUTURE REFERENCE 
-          //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
-           
-
-           // this gives us back house name => the second class in all the shields ie stark, lanister...
-           // flip ths to uppercase
+             // flip ths to uppercase
           let targetVid = targetHouse.charAt(0).toUpperCase() + targetHouse.slice(1);
 
-          //tagline.textContent = `House ${targetVid}`; code from  the first example
-          //houseinfo.textContent = houseData [0]; code from the first example
-
+        
            video.src = `video/House-${targetVid}.mp4`;
            lightbox.classList.add('lightbox-on');
            video.load();
@@ -63,10 +53,7 @@ House Greyjoy's sigil is traditionally a golden kraken on a black field. Their h
 
 
         function animateBanners() {
-          // move the banners to the left so that the current house banner is visible 
-
-          // grab the data-offset njmbe from the shield we're clicking on
-          // 
+         
           const offSet = 600;
           let currentOffset = this.dataset.offset * offSet;
           TweenMax.to(topBanners, 1, {right: currentOffset});
